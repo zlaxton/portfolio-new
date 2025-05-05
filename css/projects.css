@@ -50,6 +50,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  referrerpolicy: no-referrer;
 }
 
 .project-image::after {
@@ -150,6 +151,62 @@
   transform: translateY(-2px);
 }
 
+/* Loading States */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--metal-dark) 25%,
+    var(--metal-light) 50%,
+    var(--metal-dark) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--metal-darker);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-animation {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--metal-border);
+  border-top-color: var(--metal-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error States */
+.error-state {
+  border: 2px solid var(--metal-primary);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .projects-grid {
@@ -187,73 +244,7 @@
   }
 }
 
-/* Use transform instead of top/left for animations */
-.navbar.scrolled {
-  transform: translateY(-100%);
-}
-
-/* Group related variables */
-:root {
-  /* Colors */
-  --metal-colors: {
-    --metal-primary: #ff0000;
-    --metal-secondary: #cc0000;
-    /* ... */
-  }
-  
-  /* Typography */
-  --metal-typography: {
-    --font-heading: 'Abril Fatface', serif;
-    --font-body: 'Lato', sans-serif;
-    /* ... */
-  }
-
-  /* Animation duration variables */
-  --animation-duration: {
-    --fast: 0.2s;
-    --normal: 0.3s;
-    --slow: 0.5s;
-  }
-
-  /* Add CSS custom properties for common values */
-  --border-width: 2px;
-  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Add more breakpoints for better control */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-/* Improve mobile navigation */
-@media (max-width: 768px) {
-  .navbar-nav {
-    padding: var(--space-xl) var(--space-md);
-    background: var(--metal-darker);
-  }
-}
-
-/* Use hardware acceleration */
-.hero-title {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* Add fallback styles */
-.profile-image img {
-  /* Add fallback background */
-  background: var(--metal-dark);
-}
-
-/* Add loading states */
-.btn.loading {
-  position: relative;
-  pointer-events: none;
-}
-
-/* Add print styles */
+/* Print Styles */
 @media print {
   .navbar,
   .footer,
@@ -265,161 +256,4 @@
     color: black;
     background: white;
   }
-}
-
-/* Use consistent naming conventions */
-.metal-button {
-  /* Instead of .btn */
-}
-
-/* Add security headers */
-img {
-  /* Prevent image hotlinking */
-  referrerpolicy: no-referrer;
-}
-
-/* Add meta tags */
-<meta name="description" content="Portfolio of Zlatan Kopic - Web Developer">
-<meta name="keywords" content="web development, portfolio, React, Angular">
-
-/* Add loading states */
-.skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--metal-dark) 25%,
-    var(--metal-light) 50%,
-    var(--metal-dark) 75%
-  );
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
-}
-
-/* Add error state styles */
-.error-state {
-  border: 2px solid var(--metal-primary);
-  padding: var(--space-md);
-  margin: var(--space-md) 0;
-}
-
-.hero {
-  /* Add a subtle animated background */
-  background: linear-gradient(
-    45deg,
-    var(--metal-dark) 0%,
-    var(--metal-darker) 100%
-  );
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(255, 0, 0, 0.1) 10px,
-    rgba(255, 0, 0, 0.1) 20px
-  );
-  animation: moveBackground 20s linear infinite;
-}
-
-.navbar {
-  /* Add glass effect */
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--metal-border);
-}
-
-.navbar-brand img {
-  /* Add glow effect */
-  filter: drop-shadow(0 0 5px var(--metal-glow));
-}
-
-.btn {
-  /* Add metallic texture */
-  background-image: 
-    linear-gradient(
-      45deg,
-      var(--metal-gradient) 0%,
-      var(--metal-gradient-reverse) 100%
-    ),
-    url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.1)"/></svg>');
-  background-size: 100% 100%, 20px 20px;
-}
-
-.btn:hover {
-  /* Add pulse effect */
-  animation: pulse 1s infinite;
-}
-
-.section {
-  /* Add reveal animation */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.footer {
-  /* Add animated border */
-  position: relative;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--metal-primary),
-    transparent
-  );
-  animation: borderFlow 2s linear infinite;
-}
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--metal-gradient);
-  transform-origin: 0 50%;
-  transform: scaleX(0);
-  z-index: 1000;
-}
-
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--metal-darker);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.loading-animation {
-  width: 50px;
-  height: 50px;
-  border: 3px solid var(--metal-border);
-  border-top-color: var(--metal-primary);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
 }

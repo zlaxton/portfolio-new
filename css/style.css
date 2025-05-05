@@ -642,6 +642,14 @@ img {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
+}
+
+.project-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-card:hover {
@@ -811,41 +819,87 @@ img {
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
   position: relative;
-  z-index: 1;
-}
-
-.form-group label {
-  color: var(--metal-text);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9em;
+  margin-bottom: 1.5rem;
 }
 
 .form-group input,
 .form-group textarea {
-  background: var(--metal-dark);
-  border: 1px solid var(--metal-border);
-  color: var(--metal-text);
-  padding: var(--space-sm);
   width: 100%;
-  margin-bottom: var(--space-md);
+  padding: 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--metal-primary);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
   outline: none;
-  box-shadow: 0 0 10px var(--metal-glow);
 }
 
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
+.form-group.error input,
+.form-group.error textarea {
+  border-color: var(--error-color);
+  background-color: rgba(var(--error-rgb), 0.05);
+}
+
+.form-group.error .error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+  border-color: var(--success-color);
+  background-color: rgba(var(--success-rgb), 0.05);
+}
+
+.form-group.success .success-message {
+  color: var(--success-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.form-submit-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-submit-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.form-submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .contact-form .btn-primary {
@@ -1816,3 +1870,59 @@ textarea:focus {
   color: var(--metal-text);
   transform: translateY(-2px);
 }
+
+/* Scroll Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--metal-primary);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 1000;
+  transition: transform 0.1s ease-out;
+}
+
+/* Stagger Animation for Project Cards */
+.projects-grid .project-card:nth-child(1) { transition-delay: 0.1s; }
+.projects-grid .project-card:nth-child(2) { transition-delay: 0.2s; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 0.3s; }
+.projects-grid .project-card:nth-child(4) { transition-delay: 0.4s; }
+.projects-grid .project-card:nth-child(5) { transition-delay: 0.5s; }
+.projects-grid .project-card:nth-child(6) { transition-delay: 0.6s; }

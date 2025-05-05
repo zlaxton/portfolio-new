@@ -1,0 +1,165 @@
+/* ===== LIGHT THEME (DEFAULT) ===== */
+:root {
+  /* Color palette */
+  --primary: #4361ee;
+  --primary-light: #e0e7ff;
+  --primary-dark: #3a56d4;
+  --primary-rgb: 67, 97, 238;
+  --secondary: #3f37c9;
+  --accent: #f72585;
+  
+  /* Text colors */
+  --text-color: #333333;
+  --text-muted: #6c757d;
+  --text-light: #f8f9fa;
+  --text-inverse: #ffffff;
+  
+  /* Backgrounds */
+  --bg-color: #ffffff;
+  --bg-color-rgb: 255, 255, 255;
+  --card-bg: #f8f9fa;
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --footer-bg: #f1f3f5;
+  --input-bg: #ffffff;
+  
+  /* Borders */
+  --border-color: #dee2e6;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  
+  /* Hero section */
+  --hero-overlay: linear-gradient(135deg, rgba(41, 98, 255, 0.8), rgba(0, 57, 203, 0.9));
+
+  --metal-primary: #ff0000;
+  --metal-secondary: #cc0000;
+  --metal-dark: #1a1a1a;
+  --metal-darker: #000000;
+  --metal-light: #333;
+  --metal-lighter: #666;
+  --metal-text: #ffffff;
+  --metal-text-muted: #cccccc;
+  --metal-border: #333333;
+  --metal-glow: rgba(255, 0, 0, 0.5);
+  --metal-gradient: linear-gradient(45deg, var(--metal-dark), var(--metal-darker));
+  --metal-gradient-reverse: linear-gradient(45deg, var(--metal-darker), var(--metal-dark));
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  /* Color palette */
+  --primary: #60a5fa;
+  --primary-light: #1e293b;
+  --primary-dark: #93c5fd;
+  --primary-rgb: 96, 165, 250;
+  --secondary: #818cf8;
+  --accent: #f472b6;
+  
+  /* Text colors */
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #f8f9fa;
+  --text-inverse: #0f172a;
+  
+  /* Backgrounds */
+  --bg-color: #0f172a;
+  --bg-color-rgb: 15, 23, 42;
+  --card-bg: #1e293b;
+  --navbar-bg: rgba(15, 23, 42, 0.95);
+  --footer-bg: #1e293b;
+  --input-bg: #334155;
+  
+  /* Borders */
+  --border-color: #475569;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+  
+  /* Hero section */
+  --hero-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+
+  --metal-primary: #ff0000;
+  --metal-secondary: #cc0000;
+  --metal-dark: #1a1a1a;
+  --metal-darker: #000000;
+  --metal-light: #333;
+  --metal-lighter: #666;
+  --metal-text: #ffffff;
+  --metal-text-muted: #cccccc;
+  --metal-border: #333333;
+  --metal-glow: rgba(255, 0, 0, 0.5);
+  --metal-gradient: linear-gradient(45deg, var(--metal-dark), var(--metal-darker));
+  --metal-gradient-reverse: linear-gradient(45deg, var(--metal-darker), var(--metal-dark));
+}
+
+/* ===== THEME-SPECIFIC COMPONENT STYLES ===== */
+[data-theme="dark"] .navbar {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .project-card {
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-secondary {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .project-links .btn-small {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-color: transparent;
+}
+
+[data-theme="dark"] .project-links .btn-small:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .project-tech span {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .social-links a {
+  color: var(--text-muted);
+}
+
+/* ===== TRANSITIONS ===== */
+[data-theme] {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+[data-theme] .hero {
+  transition: background 0.5s ease;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  [data-theme] {
+    --bg-color: white !important;
+    --text-color: black !important;
+    --card-bg: white !important;
+  }
+  
+  .navbar, .theme-toggle, .hero-buttons {
+    display: none !important;
+  }
+}

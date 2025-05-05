@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zlatan Kopic - Full-Stack Developer</title>
+  <meta name="description" content="Professional portfolio showcasing my web development projects">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  
+  <!-- JavaScript -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="img/logo3.png" alt="Zlatan Kopic - Portfolio Logo" class="logo">
+      </a>
+      
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-moon"></i>
+        </button>
+        <button class="navbar-toggler" aria-label="Toggle menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-profile">
+          <div class="hero-text">
+            <h1 class="hero-title">Zlatan <span class="metal-text">Kopic</span></h1>
+            <p class="hero-subtitle">Full-Stack Developer</p>
+            <p class="hero-description">Crafting modern web experiences with clean code and creative solutions</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <i class="bi bi-code-slash"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="bi bi-envelope"></i> Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-image">
+              <img src="img/zlatan.jpg" alt="Zlatan Kopic - Professional Profile Photo" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About <span class="metal-text">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am a passionate web developer with a strong foundation in modern web technologies. My journey in web development has equipped me with the skills to create responsive, user-friendly applications.</p>
+          <div class="skills-container">
+            <h3 class="skills-title">Technical <span class="metal-text">Skills</span></h3>
+            <ul class="skills-list">
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>React, Angular, Node.js</li>
+              <li>MongoDB, Express</li>
+              <li>Git, GitHub</li>
+            </ul>
+          </div>
+          <div class="experience-container">
+            <h3 class="experience-title">Development <span class="metal-text">Experience</span></h3>
+            <ul class="skills-list">
+              <li>Full-stack web development</li>
+              <li>Responsive design implementation</li>
+              <li>API integration and development</li>
+              <li>Database design and management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span class="metal-text">Projects</span></h2>
+      
+      <div class="projects-grid">
+        <!-- Portfolio Website -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/portfolio2.PNG" alt="Portfolio Website Screenshot" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio with heavy metal theme</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/portfolio-new" class="btn btn-small" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/portfolio-new/" class="btn btn-small" target="_blank" rel="noopener">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="portfolio">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="portfolio-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A personal portfolio website showcasing my projects and skills with a unique heavy metal theme.</p>
+                <ul>
+                  <li>Responsive design for all devices</li>
+                  <li>Interactive project cards with details</li>
+                  <li>Dark/light theme toggle</li>
+                  <li>Contact form with validation</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: HTML5, CSS3, JavaScript</li>
+                  <li>CSS Variables for theming</li>
+                  <li>CSS Grid and Flexbox for layout</li>
+                  <li>Custom animations and transitions</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Heavy metal inspired design</li>
+                  <li>Project showcase with detailed descriptions</li>
+                  <li>Skills and experience section</li>
+                  <li>Social media integration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meet App -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/meet1.PNG" alt="Meet App Screenshot" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3>Meet App</h3>
+            <p>Event calendar with Google Calendar API</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Google Calendar API</span>
+              <span>AWS Lambda</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/meet" class="btn btn-small" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/meet/" class="btn btn-small" target="_blank" rel="noopener">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="meet">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="meet-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A serverless, progressive web application (PWA) built with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.</p>
+                <ul>
+                  <li>Filter events by city</li>
+                  <li>Show/hide event details</li>
+                  <li>Specify number of events</li>
+                  <li>Use the app when offline</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: React with TDD approach</li>
+                  <li>Backend: AWS Lambda</li>
+                  <li>API: Google Calendar API</li>
+                  <li>Authentication: OAuth2</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Serverless architecture</li>
+                  <li>Progressive Web App (PWA)</li>
+                  <li>Data visualization</li>
+                  <li>Offline functionality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- myFlix Angular -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/ss myflix angular.PNG" alt="myFlix Angular - Movie Library Application" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">myFlix <span class="metal-text">Angular</span></h3>
+            <p class="project-description">A movie library application built with Angular and TypeScript.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/myFlix-Angular-client" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/myFlix-Angular-client/" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="myflix-angular">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="myflix-angular-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A full-stack movie library application that allows users to:</p>
+                <ul>
+                  <li>Browse and search movies</li>
+                  <li>Create and manage user profiles</li>
+                  <li>Add movies to favorites</li>
+                  <li>View detailed movie information</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: Angular with TypeScript</li>
+                  <li>Backend: Node.js with Express</li>
+                  <li>Database: MongoDB</li>
+                  <li>Authentication: JWT</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Responsive design for all devices</li>
+                  <li>User authentication and authorization</li>
+                  <li>RESTful API integration</li>
+                  <li>Data persistence with MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- myFlix React -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/myFlix client.PNG" alt="myFlix React - Movie Library Application" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">myFlix <span class="metal-text">React</span></h3>
+            <p class="project-description">A movie library application built with React and Redux.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Redux</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/myFlix-client" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/myFlix-client/" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="myflix-react">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="myflix-react-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A modern movie library application that enables users to:</p>
+                <ul>
+                  <li>Browse and search movies</li>
+                  <li>Create and manage user profiles</li>
+                  <li>Add movies to favorites</li>
+                  <li>View detailed movie information</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: React with Redux</li>
+                  <li>Backend: Node.js with Express</li>
+                  <li>Database: MongoDB</li>
+                  <li>Authentication: JWT</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Responsive design for all devices</li>
+                  <li>User authentication and authorization</li>
+                  <li>RESTful API integration</li>
+                  <li>Data persistence with MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat App -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/chat app1.png" alt="Chat App - Real-time Messaging Application" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Chat <span class="metal-text">App</span></h3>
+            <p class="project-description">A real-time messaging application built with React Native.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Expo</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/chat-app" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/chat-app/" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="chat-app">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="chat-app-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A real-time messaging application that allows users to:</p>
+                <ul>
+                  <li>Send and receive messages in real-time</li>
+                  <li>Share images and location</li>
+                  <li>Create and manage chat rooms</li>
+                  <li>Customize their profile</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: React Native</li>
+                  <li>Backend: Firebase</li>
+                  <li>Database: Cloud Firestore</li>
+                  <li>Authentication: Firebase Auth</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Real-time messaging</li>
+                  <li>Image sharing</li>
+                  <li>Location sharing</li>
+                  <li>Offline support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pokédex App -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/screenshots/pokedex1.PNG" alt="Pokédex App - Pokémon Information Application" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Pokédex <span class="metal-text">App</span></h3>
+            <p class="project-description">A Pokémon information application built with JavaScript.</p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zlaxton/pokedex-app" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-github"></i> View Code
+              </a>
+              <a href="https://zlaxton.github.io/pokedex-app/" target="_blank" rel="noopener" class="btn btn-small">
+                <i class="bi bi-box-arrow-up-right"></i> Live View
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="pokedex">
+                <i class="bi bi-info-circle"></i> Project Details
+              </button>
+            </div>
+            <div class="project-details" id="pokedex-details">
+              <div class="details-content">
+                <h4>Project Overview</h4>
+                <p>A Pokémon information application that allows users to:</p>
+                <ul>
+                  <li>Browse Pokémon by name or ID</li>
+                  <li>View detailed Pokémon information</li>
+                  <li>See Pokémon statistics and abilities</li>
+                  <li>View Pokémon images</li>
+                </ul>
+                <h4>Technical Details</h4>
+                <ul>
+                  <li>Frontend: JavaScript</li>
+                  <li>API: PokéAPI</li>
+                  <li>Styling: CSS</li>
+                  <li>Bootstrap for UI components</li>
+                </ul>
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Search functionality</li>
+                  <li>Detailed Pokémon information</li>
+                  <li>Responsive design</li>
+                  <li>Modal views for details</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in <span class="metal-text">Touch</span></h2>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:zlatankopic@gmail.com" class="contact-link">zlatankopic@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Location</h3>
+            <a href="https://maps.google.com/?q=Sarajevo,Bosnia+and+Herzegovina" target="_blank" rel="noopener" class="contact-link">Sarajevo, Bosnia and Herzegovina</a>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/zlaxton"GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/zlatankopic" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com/yourusername" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
+      </div>
+      <p class="copyright">&copy; <span id="current-year"></span> Zlatan Kopic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <i class="bi bi-moon"></i>
+  </button>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -51,6 +51,18 @@
   height: 100%;
   object-fit: cover;
   referrerpolicy: no-referrer;
+  transition: filter 0.3s ease;
+}
+
+/* Blur-up loading effect */
+.project-image img[loading="lazy"] {
+  filter: blur(10px);
+  transform: scale(1.1);
+}
+
+.project-image img.loaded {
+  filter: blur(0);
+  transform: scale(1);
 }
 
 .project-image::after {
